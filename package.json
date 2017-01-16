@@ -1,0 +1,15 @@
+{
+  "name": "module-perf",
+  "version": "1.0.0",
+  "main": "src/main.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "devDependencies": {
+    "script-type-module": "^1.0.0",
+    "webpack": "beta"
+  },
+  "dependencies": {
+    "http2": "^3.3.6"
+  }
+}

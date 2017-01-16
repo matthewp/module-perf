@@ -1,0 +1,25 @@
+<!doctype html>
+<html>
+<head>
+  <title>Perf test</title>
+</head>
+<body>
+  <h1>Modules perf test</h1>
+
+  <h1 id="host">Loading</h1>
+  <h2 id="timeSpent"></h2>
+  <script type="module" src="./src/main.js"></script>
+
+  <script>
+  (function(){
+    let script = document.querySelector('script[type=module]');
+    let start = performance.now();
+    script.onload = function(){
+      let stop = performance.now();
+      host.textContent = 'Done!';
+      timeSpent.textContent = stop - start;
+    };
+  })();
+  </script>
+</body>
+</html>
